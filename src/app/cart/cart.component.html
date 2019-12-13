@@ -1,0 +1,10 @@
+<h3>Cart</h3>
+
+<div class="cart-item" *ngFor="let item of items; index as itemId">
+  <span>{{itemId+1}}.</span>
+  <span>{{ item.name }} </span>
+  <span>{{ item.price | currency }}</span>
+  <button (click)="deleteItem(itemId)">Remove</button>
+</div>
+
+<h4 *ngIf="sum != 0">Summe: {{sum}}| currency</h4>
